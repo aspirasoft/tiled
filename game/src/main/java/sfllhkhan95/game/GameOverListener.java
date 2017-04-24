@@ -1,11 +1,18 @@
 package sfllhkhan95.game;
 
 /**
- * Created by saifkhichi96 on 16/03/2017.
+ * Interface definition for a callback to be invoked when the game ends.
+ *
+ * @author Muhammad Saifullah Khan
+ * @version 1.0
  */
-
 public interface GameOverListener {
 
-    void onGameOver();
+    /**
+     * Called when the game ends. i.e. when GameCore.isOver flag is set.
+     *
+     * @see GameCore
+     */
+    void onOver();
 
 }
