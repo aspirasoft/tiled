@@ -1,1 +1,1 @@
-include ':game'
+include ':android-game', ':game'

@@ -1,11 +1,16 @@
 package sfllhkhan95.game;
 
 /**
- * Created by saifkhichi96 on 16/03/2017.
+ * Interface definition for a callback to be invoked when game first starts.
+ *
+ * @author Muhammad Saifullah Khan
+ * @version 1.0
  */
-
 public interface GameStartListener {
 
-    void init();
+    /**
+     * Called when the game first starts.
+     */
+    void onStart();
 
 }
