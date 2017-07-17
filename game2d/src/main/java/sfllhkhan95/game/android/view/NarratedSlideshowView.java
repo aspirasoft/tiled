@@ -17,7 +17,7 @@ import android.widget.ViewSwitcher;
 
 import java.util.ArrayList;
 
-import sfllhkhan95.android.game.R;
+import sfllhkhan95.game.R;
 
 
 /**
