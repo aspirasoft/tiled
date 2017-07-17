@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -42,3 +42,32 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }
+
+ext {
+    //For bintray and jcenter distribution
+    bintrayRepo = 'maven'
+    bintrayName = 'game-core'
+
+    publishedGroupId = 'sfllhkhan95.game'
+    libraryName = 'GameCore'
+    artifact = 'game2d'
+
+    libraryDescription = 'GameCore provides a API for writing simple Java and native Android games.'
+
+    siteUrl = 'https://github.com/sfllhkhan95/game-core'
+    gitUrl = 'https://github.com/sfllhkhan95/game-core.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = '1'
+    developerName = 'Muhammad Saif Ullah Khan'
+    developerEmail = 'saifkhichi96@gmail.com'
+    organization = 'bytexcite'
+    licenseName = 'MIT License'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+
+}
+//These two remote files contain Bintray configuration as described above.
+apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/install.gradle'
+apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/bintray.gradle'
