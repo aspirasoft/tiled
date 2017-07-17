@@ -9,6 +9,13 @@ import android.util.AttributeSet;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * TickerTextView is an animated text view in which text gradually appears animated according to
+ * the specified TickerType.
+ *
+ * @author saifkhichi96
+ * @version 1.0
+ */
 public class TickerTextView extends AppCompatTextView {
 
     public TickerType tickerType = TickerType.TICK_BY_CHARACTER;

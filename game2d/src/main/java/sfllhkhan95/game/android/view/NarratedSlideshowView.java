@@ -21,7 +21,11 @@ import sfllhkhan95.game.R;
 
 
 /**
+ * NarratedSlideshowView defines a custom view which displays a collection of ImageViews in a slideshow
+ * and a TickerTextView and audio narration for slideshow description.
  *
+ * @author saifkhichi96
+ * @version 1.0
  */
 public class NarratedSlideshowView extends RelativeLayout implements OnTickerCompleteListener {
 
