@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/game-core.iml" filepath="$PROJECT_DIR$/game-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game2d/game2d.iml" filepath="$PROJECT_DIR$/game2d/game2d.iml" />
     </modules>
   </component>
 </project>
