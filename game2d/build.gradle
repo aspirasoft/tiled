@@ -62,7 +62,7 @@ ext {
     developerId = '1'
     developerName = 'Muhammad Saif Ullah Khan'
     developerEmail = 'saifkhichi96@gmail.com'
-    organization = 'bytexcite'
+    organization = ''
     licenseName = 'MIT License'
     licenseUrl = 'https://opensource.org/licenses/MIT'
     allLicenses = ["MIT"]
