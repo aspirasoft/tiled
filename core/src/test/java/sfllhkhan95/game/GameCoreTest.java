@@ -1,7 +1,5 @@
 package sfllhkhan95.game;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by saifkhichi96 on 24/04/2017.
  */

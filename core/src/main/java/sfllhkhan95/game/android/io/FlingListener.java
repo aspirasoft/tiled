@@ -1,4 +1,4 @@
-package sfllhkhan95.game.android.input;
+package sfllhkhan95.game.android.io;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
