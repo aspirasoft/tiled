@@ -52,7 +52,7 @@ ext {
     libraryName = 'GameCore'
     artifact = 'game2d'
 
-    libraryDescription = 'GameCore provides a API for writing simple Java and native Android games.'
+    libraryDescription = 'GameCore provides API for writing simple Java games and native Android games.'
 
     siteUrl = 'https://github.com/sfllhkhan95/game-core'
     gitUrl = 'https://github.com/sfllhkhan95/game-core.git'
