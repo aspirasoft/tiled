@@ -23,6 +23,9 @@ allprojects {
             name 'Google'
         }
     }
-}
 
-apply plugin: 'com.jfrog.bintray'
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
