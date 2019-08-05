@@ -51,8 +51,13 @@ ext {
     developerId = 1
     developerName = 'Muhammad Saif Ullah Khan'
     developerEmail = 'saifkhichi96@gmail.com'
-    organization = 'AspiraSoft'
+    organization = 'aspirasoft'
     licenseName = 'MIT License'
     licenseUrl = 'https://opensource.org/licenses/MIT'
     allLicenses = ["MIT"]
 }
+
+
+// Bintray configuration
+apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/install.gradle'
+apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/bintray.gradle'
