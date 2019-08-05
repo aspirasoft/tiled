@@ -1,0 +1,7 @@
+<resources>
+
+  <style name="TiledActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+  </style>
+
+</resources>

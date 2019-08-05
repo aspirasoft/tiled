@@ -1,1 +1,1 @@
-include ':game2d'
+include ':tilemap', ':demo'

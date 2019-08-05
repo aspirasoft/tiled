@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">Demo</string>
+  <string name="demo_map">
+    .i.............................................................................................\n
+    .m........n.o.e.e.o.n..................o....o........n..e..n..o..o..n..e..e....................\n
+    .....lgg......................o.ggg.e..n....n..................................................\n
+    .....l.....p..........s.......g.....g..e....e.......n..o..e..n..n..............................\n
+    .....loo...g..tttt....t.......n.ggg.n..............................e.e.e.e.....................\n
+    .....gggg...eetee....tt.......g.....g.tttttttt....................ggggggggg....................\n
+    .............ete....ttt.......e.ggg.o.t......t...................gwn.n.n.nw....................\n
+    gggggg..ggggggtooo.tttt.......g.....g.t......t.....ggggggggggggggw..o.o.o.w.............AB.....\n
+    ..nn......nn..ttttttttt...............t...................................w.....fffff...CD.....\n
+    ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+  </string>
+</resources>
