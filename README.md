@@ -5,6 +5,8 @@ TiledView is a lightweight API for easily creating tile maps in Android. It is u
 Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called tiles. Think about any game that uses regularly repeating squares of background, and you'll probably find it uses tilemaps.
 
 ## Installation
+[ ![Download](https://api.bintray.com/packages/aspirasoft/maven/tiled-view/images/download.svg) ](https://bintray.com/aspirasoft/maven/tiled-view/_latestVersion)
+
 Open the module level `build.gradle` file and add dependency to this library using:
 ```
 dependencies {
