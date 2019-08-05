@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName '1.0.0'
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+repositories {
+    mavenCentral()
+}
+
+// For Bintray and JCenter distribution
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'tiled-view'
+
+    publishedGroupId = 'co.aspirasoft.android.view'
+    libraryName = 'TiledView'
+    artifact = 'tilemap'
+
+    libraryDescription = 'Lightweight library for creating tile maps in Android.'
+
+    siteUrl = 'https://github.com/saifkhichi96/tiled-view'
+    gitUrl = 'https://github.com/saifkhichi96/tiled-view.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 1
+    developerName = 'Muhammad Saif Ullah Khan'
+    developerEmail = 'saifkhichi96@gmail.com'
+    organization = 'AspiraSoft'
+    licenseName = 'MIT License'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}

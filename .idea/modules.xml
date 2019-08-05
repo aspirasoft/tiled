@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/game-core-android.iml" filepath="$PROJECT_DIR$/game-core-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/game2d/game2d.iml" filepath="$PROJECT_DIR$/game2d/game2d.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tilemap/tilemap.iml" filepath="$PROJECT_DIR$/tilemap/tilemap.iml" />
     </modules>
   </component>
 </project>
