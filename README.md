@@ -3,6 +3,8 @@
 Tiled is a lightweight API for easily creating tilemaps in Android. It is useful for applications and games which need
 to display tile-based graphics.
 
+![(Demo) Super Mario World 2: Yoshi's Island 1](./docs/demo_2.jpg)
+
 ## The Tilemap Data Structure
 
 Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of
@@ -24,7 +26,7 @@ dependencies {
 }
 ```
 
-Replace la
+Replace `${latestVersion}` with the latest release version number.
 
 ## The [`TiledView`](./tiles/src/main/java/dev/aspirasoft/apis/tiled/TiledView.kt) class
 
@@ -47,4 +49,9 @@ You can also set the scroll direction with the `orientation` attribute, which ta
 , `vertical`  and `none`. In case of `none`, a fixed tilemap is displayed, with the whole map scaled to fit the size of
 the view / device screen.
 
-See the [demo app](./demo/src/main/java/dev/aspirasoft/apis/tiled/demo/MarioDemo.kt) for a usage example.
+## Demo
+
+[![(Demo) Super Mario Bros. 1985](./docs/demo_1.jpg)](https://youtu.be/KlIh_w0GX58)
+
+In the [demo app](./demo/src/main/java/dev/aspirasoft/apis/tiled/demo/MarioDemo.kt), we use this library to build a
+powerful Super Mario Bros. user-interface. You can [watch the complete demo here](https://youtu.be/KlIh_w0GX58).
