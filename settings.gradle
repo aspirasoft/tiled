@@ -1,1 +1,1 @@
-include ':tilemap', ':demo'
+include ':tiles', ':demo'
