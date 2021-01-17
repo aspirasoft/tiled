@@ -1,17 +1,16 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
-        versionName '1.0.0'
+        versionName '0.0.1'
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -20,12 +19,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 repositories {
@@ -35,23 +43,23 @@ repositories {
 // For Bintray and JCenter distribution
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'tiled-view'
+    bintrayName = 'tiled'
 
-    publishedGroupId = 'co.aspirasoft.android.view'
-    libraryName = 'TiledView'
-    artifact = 'tilemap'
+    publishedGroupId = 'dev.aspirasoft.apis'
+    libraryName = 'Tiled'
+    artifact = 'tiled'
 
-    libraryDescription = 'Lightweight library for creating tile maps in Android.'
+    libraryDescription = 'A lightweight library for creating simple tilemap-based UIs in Android.'
 
-    siteUrl = 'https://github.com/saifkhichi96/tiled-view'
-    gitUrl = 'https://github.com/saifkhichi96/tiled-view.git'
+    siteUrl = 'https://github.com/saifkhichi96/tiled'
+    gitUrl = 'https://github.com/saifkhichi96/tiled.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '0.0.1'
 
     developerId = 1
     developerName = 'Muhammad Saif Ullah Khan'
     developerEmail = 'saifkhichi96@gmail.com'
-    organization = 'aspirasoft'
+    organization = 'saifkhichi96'
     licenseName = 'MIT License'
     licenseUrl = 'https://opensource.org/licenses/MIT'
     allLicenses = ["MIT"]
