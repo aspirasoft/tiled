@@ -5,7 +5,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "co.aspirasoft.android.demo"
+        applicationId "dev.aspirasoft.apis.tiled.demo"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1

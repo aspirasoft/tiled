@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/sources.iml" filepath="$PROJECT_DIR$/sources.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo/sources.demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo/sources.demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tiles/sources.tiles.iml" filepath="$PROJECT_DIR$/.idea/modules/tiles/sources.tiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
     </modules>
   </component>
 </project>
