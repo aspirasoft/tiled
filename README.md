@@ -15,18 +15,15 @@ you'll probably find it uses tilemaps.
 
 ## Installation
 
-[![Download](https://api.bintray.com/packages/saifkhichi96/maven/tiled/images/download.svg)](https://bintray.com/saifkhichi96/maven/tiled/_latestVersion)
+[![Download Tiled](https://maven-badges.herokuapp.com/maven-central/dev.aspirasoft.apis/tiled/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.aspirasoft.apis/tiled)
 
-Open the module level `build.gradle` file and add dependency to this library using:
+Make sure the `mavenCentral()` repository is enabled, add the following dependency in the module `build.gradle` file:
 
 ```
-dependencies {
-  // ...
-  implementation "dev.aspirasoft.apis:tiled:${latestVersion}"
-}
+implementation "dev.aspirasoft.apis:tiled:${latestVersion}"
 ```
 
-Replace `${latestVersion}` with the latest release version number.
+Replace `${latestVersion}` with the latest [release version](https://github.com/aspirasoft/tiled/releases/) number.
 
 ## The [`TiledView`](./tiles/src/main/java/dev/aspirasoft/apis/tiled/TiledView.kt) class
 
