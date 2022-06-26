@@ -38,32 +38,27 @@ tasks.withType(Javadoc) {
     options.addStringOption('charSet', 'UTF-8')
 }
 
-// For Bintray and JCenter distribution
+// for maven central distribution
 ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'tiled'
-
-    publishedGroupId = 'dev.aspirasoft.apis'
-    libraryName = 'Tiled'
-    artifact = 'tiled'
-
-    libraryDescription = 'A lightweight library for creating simple tilemap-based UIs in Android.'
-
-    siteUrl = 'https://github.com/saifkhichi96/tiled'
-    gitUrl = 'https://github.com/saifkhichi96/tiled.git'
-
-    libraryVersion = '0.0.1'
-
-    developerId = 1
-    developerName = 'Muhammad Saif Ullah Khan'
-    developerEmail = 'saifkhichi96@gmail.com'
-    organization = 'saifkhichi96'
-    licenseName = 'MIT License'
-    licenseUrl = 'https://opensource.org/licenses/MIT'
-    allLicenses = ["MIT"]
+    PUBLISH_GROUP_ID = 'dev.aspirasoft.apis'
+    PUBLISH_VERSION = '0.0.1'
+    PUBLISH_ARTIFACT_ID = 'tiled'
+    PUBLISH_ARTIFACT_DESC = 'A lightweight library for creating simple tilemap-based UIs in Android.'
+    PUBLISH_ARTIFACT_URL = 'https://github.com/aspirasoft/tiled'
+    PUBLISH_ARTIFACT_LICENSE = {
+        name = 'MIT License'
+        url = 'https://github.com/aspirasoft/tiled/blob/master/LICENSE'
+    }
+    PUBLISH_ARTIFACT_AUTHOR = {
+        id = 'saifkhichi96'
+        name = 'Saif Khan'
+        email = 'saifkhichi96@gmail.com'
+    }
+    PUBLISH_ARTIFACT_VCS = {
+        connection = 'scm:git:github.com/aspirasoft/tiled.git'
+        developerConnection = 'scm:git:ssh://github.com/aspirasoft/tiled.git'
+        url = 'https://github.com/aspirasoft/tiled/tree/master'
+    }
 }
 
-
-// Bintray configuration
-apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/install.gradle'
-apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/saifkhichi96/template-files/main/android/gradle/publish-module.gradle'

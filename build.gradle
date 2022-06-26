@@ -15,6 +15,10 @@ buildscript {
     }
 }
 
+plugins {
+    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
+}
+
 allprojects {
     repositories {
         jcenter()
@@ -29,3 +33,5 @@ allprojects {
         options.addStringOption('encoding', 'UTF-8')
     }
 }
+
+apply from: 'https://raw.githubusercontent.com/saifkhichi96/template-files/main/android/gradle/publish-root.gradle'
