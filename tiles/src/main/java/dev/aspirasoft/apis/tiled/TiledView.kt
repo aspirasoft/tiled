@@ -32,7 +32,8 @@ class TiledView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
 
     private val lookupTable: HashMap<String, Int> = HashMap()
 
-    private lateinit var tileMap: TileMap
+    lateinit var map: TileMap
+        private set
 
     var pixelWidth: Double = 0.0
     var pixelHeight: Double = 0.0
@@ -114,7 +115,7 @@ class TiledView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
         }
 
         val tileSize = calculateTileSize(rowCount, columnCount)
-        this.tileMap = TileMap(columnCount, rowCount, tileSize.first, tileSize.second)
+        this.map = TileMap(columnCount, rowCount, tileSize.first, tileSize.second)
 
         val grid = LinearLayout(context)
         grid.layoutParams = LayoutParams(
@@ -127,7 +128,7 @@ class TiledView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
             val row = LinearLayout(context)
             row.layoutParams = LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                this.tileMap.tileHeight.roundToInt()
+                this.map.tileHeight.roundToInt()
             )
             row.orientation = HORIZONTAL
 
@@ -136,12 +137,12 @@ class TiledView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
                 val tileImage = ImageView(context)
                 tileImage.scaleType = ImageView.ScaleType.FIT_XY
                 tileImage.layoutParams = ViewGroup.LayoutParams(
-                    ceil(this.tileMap.tileWidth).roundToInt(),
-                    ceil(this.tileMap.tileHeight).roundToInt(),
+                    ceil(this.map.tileWidth).roundToInt(),
+                    ceil(this.map.tileHeight).roundToInt(),
                 )
 
                 row.addView(tileImage)
-                this.tileMap[c, r] = id
+                this.map[c, r] = id
                 lookupTable[id]?.let { tileImage.setImageResource(it) }
 
                 tileImage.setOnClickListener {
@@ -173,7 +174,7 @@ class TiledView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
     @UiThread
     @Throws(IllegalArgumentException::class, IndexOutOfBoundsException::class)
     operator fun set(c: Int, r: Int, id: String) {
-        this.tileMap[c, r] = id
+        this.map[c, r] = id
 
         val tileImage = getViewAt(c, r)
         val resId = lookupTable[id]
@@ -191,21 +192,21 @@ class TiledView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
      */
     @Throws(IndexOutOfBoundsException::class)
     operator fun get(c: Int, r: Int): String {
-        return tileMap[c, r]
+        return map[c, r]
     }
 
     /**
      * Column in which horizontal position [x] (in pixels) lies.
      */
     fun getColumn(x: Double): Int {
-        return (x / tileMap.tileWidth).toInt()
+        return (x / map.tileWidth).toInt()
     }
 
     /**
      * Row in which vertical position [y] (in pixels) lies.
      */
     fun getRow(y: Double): Int {
-        return (y / tileMap.tileHeight).toInt()
+        return (y / map.tileHeight).toInt()
     }
 
     private fun calculateTileSize(rowCount: Int, columnCount: Int): Pair<Double, Double> {
